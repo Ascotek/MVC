@@ -28,4 +28,11 @@ public class PersonService {
     public Person getEmptyPerson() {
         return new Person("*","*", 18, '*');
     }
+
+    public Long addPerson(Person newPerson) {
+        return repository.add(newPerson);
+    }
+    public Person getPerson(Long id){
+        return repository.getById(id);
+    }
 }

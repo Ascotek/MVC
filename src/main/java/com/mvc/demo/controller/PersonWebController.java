@@ -24,7 +24,8 @@ public class PersonWebController {
 
     @PostMapping
     public String setPerson(Person newPerson, Model model){
-        model.addAttribute("person", service.modifyPerson(newPerson));
+        Long id = service.addPerson(newPerson);
+        model.addAttribute("person", service.getPerson(id));
         return "personView";
     }
 

@@ -21,12 +21,12 @@ public class PersonRepository {
         return new Person();
     }
     public Person getById(Long id){
-        return new Person();
+        return personList.get(id);
     }
     public Long add(Person person){
         Long newKey = 1 + Collections.max(personList.keySet());
         personList.put(newKey, person);
-        return 1L;
+        return newKey;
     }
     public boolean delete(Person person){
         Long key = -1L;
