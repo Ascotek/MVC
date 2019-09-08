@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<div>Person add a new one</div>
+<form action="/person" method="post">
+    <table>
+        <tr>
+            <td>Imię:
+                <input type="text" name="firstName" th:field="${person.firstName}"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Nazwisko:
+                <input type="text" name="lastName" th:field="${person.lastName}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Wiek
+                <input type="number" name="age" th:field="${person.age}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Plec
+                <input type="text" name="sex" th:field="${person.sex}"/>
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>
+                <input type="submitt" value="Rejestruj"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

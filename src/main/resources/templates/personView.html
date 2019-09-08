@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<div>Person information</div>
+<table>
+    <tr>
+        <td>Imię:</td>
+        <td th:text="${person.firstName}">Brak</td>
+    </tr>
+    <tr>
+        <td>Nazwisko:</td>
+        <td th:text="${person.lastName}">Brak</td>
+    </tr>
+    <tr>
+        <td>Wiek</td>
+        <td th:text="${person.age}">Brak</td>
+    </tr>
+    <tr>
+        <td>Plec</td>
+        <td th:text="${person.sex}">Brak</td>
+    </tr>
+</table>
+<a href="/person/add">Dodaj osobę</a>
+</body>
+</html>
